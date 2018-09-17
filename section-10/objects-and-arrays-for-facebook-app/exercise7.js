@@ -17,7 +17,7 @@ const newsfeed = [
         timeline: "We can timetravel"
     },
     {
-        username: "Hippotamus",
+        username: "Hippopotamus",
         timeline: "From ancient Egypt untill now"
     },
     {
@@ -25,3 +25,16 @@ const newsfeed = [
         timeline: "From Rome to Egypt"
     }
 ];
+
+let usernamePrompt = prompt("What's your username?");
+let passwordPrompt = prompt("What's your password?");
+
+const signIn = (user, pass) => {
+    if(user === database[0].username && pass === database[0].password) {
+        console.log(newsfeed);
+    } else {
+        console.log("Sorry, wrong username and/or password");
+    }
+}
+
+signIn(usernamePrompt, passwordPrompt);
