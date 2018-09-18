@@ -2,20 +2,29 @@ let button = document.getElementById("enter");
 let input = document.getElementById("userinput");
 let ul = document.querySelector("ul");
 
-button.addEventListener("click", () => {
-    if (input.value.length > 0){
-        let li = document.createElement("li");
-        li.appendChild(document.createTextNode(input.value));
-        ul.appendChild(li);
-        input.value = "";
-    }
-});
+let inputLength = () => {
+	return input.value.length;
+}
 
-button.addEventListener("keypress", (e) => {
-    if (input.value.length > 0 && e.which === 13){
-        let li = document.createElement("li");
-        li.appendChild(document.createTextNode(input.value));
-        ul.appendChild(li);
-        input.value = "";
-    }
-});
+let createListElement = () => {
+	let li = document.createElement("li");
+	li.appendChild(document.createTextNode(input.value));
+	ul.appendChild(li);
+	input.value = "";
+}
+
+let addListAfterClick = () => {
+	if (inputLength() > 0){
+		createListElement();
+	}
+}
+
+let addListAfterKeypress = (e) => {
+	if (inputLength() > 0 && e.which === 13){
+		createListElement();
+	}
+}
+
+button.addEventListener("click", addListAfterClick);
+
+input.addEventListener("keypress", addListAfterKeypress);
