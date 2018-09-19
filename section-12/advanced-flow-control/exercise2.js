@@ -1,5 +1,5 @@
 //#1 change this function into a ternary and assign it to variable called experiencePoints
-const experiencePoints = () => { return (winBattle ? 10 : 1); }
+const experiencePoints = () => winBattle ? 10 : 1;
 
 //Using this function, answer the questions below:
 function moveCommand(direction) {
