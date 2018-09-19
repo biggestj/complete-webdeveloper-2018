@@ -1,0 +1,115 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  color: white;
+  border: none;
+}
+
+body {
+  background-color: #282c34;
+}
+
+.wrapper {
+  padding-left: 10%;
+  padding-right: 10%;
+
+}
+
+.title {
+  margin: 20px 0px;
+}
+
+.input-wrapper {
+  margin: 5px 0;
+}
+
+input {
+  background-color: lightslategrey;
+  border: solid 1px lightgrey;
+  color: #363636;
+  max-width: 400px;
+  min-width: 50%;
+  box-shadow: inset 0 1px 2px rgba(10,10,10,.1);
+  padding: .25em;
+}
+
+input:focus {
+  box-shadow: 0 0 0 .125em rgba(32,156,238, .25);
+}
+
+button {
+  background-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(32,156,238);
+  border-radius: 3px;
+  color: rgb(32,156,238);
+  cursor: pointer;
+  justify-content: center;
+  padding: .25em .5em;
+  text-align: center;
+  white-space: nowrap;
+  margin-left: 5px;
+}
+
+button:hover {
+  background-color: rgba(32,156,238, 1);
+  color: white;
+}
+
+.shoppinglist {
+  margin: 15px 0;
+}
+
+ul .shoppinglist {
+  list-style-type: none;
+  display: block;
+  max-width: 50%;
+}
+
+.item-li {
+  height: 40px;
+  list-style-type: none;
+  width: 100%;
+  max-width: 60%;
+  min-width: 25%;
+}
+
+.item-body {
+  height: 39px;
+  display: flex;
+  border-radius: 3px;
+  align-items: center;
+  background-color: #333;
+  border: 1px solid rgba(255,255,255,.1);
+  padding-left: 12px;
+  padding-right: 12px;
+  position: relative;
+}
+
+.item-body:hover {
+  background: linear-gradient(180deg, rgba(32,156,238, .8), rgba(32,156,238, .6) 50%);
+  cursor: pointer;
+}
+
+p.item-text {
+  font-size: 1.2em;
+  font-family: "Lucida Grande", "Aria Unicode MS", "Helvetica Neue", "Helvetica";
+  color: lightgrey;
+  font-weight: 500;
+  text-align: center;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.fas {
+  color: lightgrey;
+}
+
+.fas:hover {
+  color: white;
+}
